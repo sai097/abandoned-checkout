@@ -1,0 +1,28 @@
+div(style="margin-bottom: 20px")
+  | Messages 
+table(style="border: 1px solid black;border-collapse: collapse;padding:20px;")
+  tbody
+    tr
+      td(style="border: 1px solid black;border-collapse: collapse;padding:20px;") Message sent to
+      
+      td(style="border: 1px solid black;border-collapse: collapse;padding:20px;") Message sent at
+    each message in messages
+      tr
+        td(style="border: 1px solid black;border-collapse: collapse;padding:20px;")=message.sentTo 
+        td(style="border: 1px solid black;border-collapse: collapse;padding:20px;")=message.sentAt 
+
+div(style="margin-top: 30px;margin-bottom: 20px")
+  | Orders
+table(style="border: 1px solid black;border-collapse: collapse;padding:20px;")
+  tbody
+    tr
+      td(style="border: 1px solid black;border-collapse: collapse;padding:20px;") Order placed by
+      
+      td(style="border: 1px solid black;border-collapse: collapse;padding:20px;") Order placed at
+    each order in orders
+      tr
+        td(style="border: 1px solid black;border-collapse: collapse;padding:20px;")=order.client.email 
+        td(style="border: 1px solid black;border-collapse: collapse;padding:20px;")=order.createdAt 
+
+      
+        
